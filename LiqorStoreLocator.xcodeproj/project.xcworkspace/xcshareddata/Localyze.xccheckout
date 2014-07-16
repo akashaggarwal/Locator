@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>7177D170-3301-4A9D-ABB8-C50EC4EC936D</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Localyze</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>217D2166-81BD-4CDA-A083-E5A26BA82260</key>
+		<string>https://bitbucket.org/appdesignvault/adv-localyze.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>sample-project/Localyze.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>217D2166-81BD-4CDA-A083-E5A26BA82260</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://bitbucket.org/appdesignvault/adv-localyze.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>217D2166-81BD-4CDA-A083-E5A26BA82260</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>217D2166-81BD-4CDA-A083-E5A26BA82260</string>
+			<key>IDESourceControlWCCName</key>
+			<string>localyze</string>
+		</dict>
+	</array>
+</dict>
+</plist>

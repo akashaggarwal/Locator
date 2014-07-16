@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>title</key>
+		<string>HSBC</string>
+		<key>location</key>
+		<string>8991 charleston view dr</string>
+		<key>zipCode</key>
+		<string>45040</string>
+		<key>distance</key>
+		<string>1.2</string>
+		<key>distanceMetric</key>
+		<string>km</string>
+		<key>paidType</key>
+		<string>paid</string>
+		<key>latitude</key>
+		<string>39.307636</string>
+		<key>longitude</key>
+		<string>-84.344542</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Royal Bank of Scotland</string>
+		<key>location</key>
+		<string>12 Nationwide Building Society, Costco, Milton Keynes</string>
+		<key>zipCode</key>
+		<string>MK10 0AB, Buckinghamshire</string>
+		<key>distance</key>
+		<string>0.43</string>
+		<key>distanceMetric</key>
+		<string>km</string>
+		<key>paidType</key>
+		<string>free</string>
+		<key>latitude</key>
+		<string>51.500</string>
+		<key>longitude</key>
+		<string>-0.126</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>LLoyds TSB</string>
+		<key>location</key>
+		<string>50 St John Boulevard, Camden Town</string>
+		<key>zipCode</key>
+		<string>SE34 9AB, Bedfordshire</string>
+		<key>distance</key>
+		<string>3.45</string>
+		<key>distanceMetric</key>
+		<string>km</string>
+		<key>paidType</key>
+		<string>free</string>
+		<key>latitude</key>
+		<string>52.0333</string>
+		<key>longitude</key>
+		<string>-0.126</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Nationwide Building Soc.</string>
+		<key>location</key>
+		<string>34 Malverton Drive, Fishermead</string>
+		<key>zipCode</key>
+		<string>MK3 2NB, Herford</string>
+		<key>distance</key>
+		<string>2.43</string>
+		<key>distanceMetric</key>
+		<string>km</string>
+		<key>paidType</key>
+		<string>paid</string>
+		<key>latitude</key>
+		<string>51.5000</string>
+		<key>longitude</key>
+		<string>-0.34</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Royal Bank of Scotland</string>
+		<key>location</key>
+		<string>12 Nationwide Building Society, Costco, Milton Keynes</string>
+		<key>zipCode</key>
+		<string>MK10 0AB, Buckinghamshire</string>
+		<key>distance</key>
+		<string>0.43</string>
+		<key>distanceMetric</key>
+		<string>km</string>
+		<key>paidType</key>
+		<string>free</string>
+		<key>latitude</key>
+		<string>51.500</string>
+		<key>longitude</key>
+		<string>-0.126</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Barclays Bank PLC</string>
+		<key>location</key>
+		<string>Riveter Lane, 54 Moullen Road, Bath</string>
+		<key>zipCode</key>
+		<string>BA2 0AB, Bath</string>
+		<key>distance</key>
+		<string>3.21</string>
+		<key>distanceMetric</key>
+		<string>km</string>
+		<key>paidType</key>
+		<string>paid</string>
+		<key>latitude</key>
+		<string>52.0321</string>
+		<key>longitude</key>
+		<string>-0.293</string>
+	</dict>
+</array>
+</plist>
