@@ -45,6 +45,9 @@ void drawLinearGradient(CGContextRef context, CGRect rect, CGColorRef startColor
     } else {
         
     }
+    
+    //[[SDSyncEngine sharedEngine] registerNSManagedObjectClassToSync:[Holiday class]];
+    
      // [[SDSyncEngine sharedEngine] registerNSManagedObjectClassToSync:[AgencyData class]];
     [[SDSyncEngine sharedEngine] registerStringToSync:@"AgencyData;AgencyData"];
     // Override point for customization after application launch.
@@ -168,6 +171,7 @@ void drawLinearGradient(CGContextRef context, CGRect rect, CGColorRef startColor
     /*
      Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
      */
+    NSLog(@"Inside applicationDidBecomeActive");
     [[SDSyncEngine sharedEngine] startSync];
 
 }

@@ -2,25 +2,29 @@
 //  SDSyncEngine.h
 //  SignificantDates
 //
-//  Created by Chris Wagner on 7/1/12.
+//  Created by Corneliu Chitanu on 29/04/14.
+//
 //
 
 #import <Foundation/Foundation.h>
-#import <CoreLocation/CoreLocation.h>
+
 typedef enum {
     SDObjectSynced = 0,
+    SDObjectCreated,
+    SDObjectDeleted,
 } SDObjectSyncStatus;
 
 @interface SDSyncEngine : NSObject
 
 @property (atomic, readonly) BOOL syncInProgress;
 
+//@property (nonatomic) BOOL showZipOption;
 + (SDSyncEngine *)sharedEngine;
-+ (CLGeocoder *)geocoder;
-
 
 - (void)registerNSManagedObjectClassToSync:(Class)aClass;
-- (void)registerStringToSync:(NSString *)sClass;
 - (void)startSync;
+- (void)registerStringToSync:(NSString *)sClass;
+- (NSString *)dateStringForAPIUsingDate:(NSDate *)date;
+
 - (void)resetRegistration;
 @end

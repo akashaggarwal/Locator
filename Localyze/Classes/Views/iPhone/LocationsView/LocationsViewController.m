@@ -63,7 +63,7 @@
     
     //[[SDSyncEngine sharedEngine] registerStringToSync:@"AgencyData;AgencyData"];
     //[[SDSyncEngine sharedEngine] startSync];
-    
+    NSLog(@"INSIDE LOCATIONSVIEW CONTROLLER VIEW DID LOAD");
     
     [tableListView setDelegate:self];
     [tableListView setDataSource:self];
@@ -98,7 +98,7 @@
     
     [nearestLabel setText:[NSString stringWithFormat:@"%.2f",lowest]];
     [furthestLabel setText:[NSString stringWithFormat:@"%.2f",highest]];
-    
+    //NSLog(@"zip option is %hhd", [[SDSyncEngine sharedEngine] showZipOption]);
 }
 
 - (void)viewDidUnload {
@@ -106,11 +106,11 @@
     [super viewDidUnload];
 }
 
-
-- (void)viewWillAppear:(BOOL)animated {
-   // [self.navigationController setNavigationBarHidden:NO];
-    [super viewWillAppear:animated];
-}
+//
+//- (void)viewWillAppear:(BOOL)animated {
+//   // [self.navigationController setNavigationBarHidden:NO];
+//    [super viewWillAppear:animated];
+//}
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
@@ -220,7 +220,7 @@
         }
         lowest = lowest * 0.000621371192 ;
         highest  =highest * 0.000621371192;
-       // NSLog(@"closest is %f and farthest is %f and total stores are %lu",lowest, highest, (unsigned long)self.data.count);
+        NSLog(@"closest is %f and farthest is %f and total stores are %lu",lowest, highest, (unsigned long)self.data.count);
         NSSortDescriptor *firstDescriptor = [[NSSortDescriptor alloc] initWithKey:@"distanceFromCurrent" ascending:YES];
         
         NSArray *sortDescriptors = [NSArray arrayWithObjects:firstDescriptor, nil];
@@ -233,14 +233,22 @@
 
 
 - (IBAction)refreshButtonClicked:(id)sender {
-      [[SDSyncEngine sharedEngine] startSync];
+        NSLog(@"Inside refreshButtonClicked for LocationsViewController");
+    [[SDSyncEngine sharedEngine] startSync];
 }
 
 
 - (void)checkSyncStatus {
     if ([[SDSyncEngine sharedEngine] syncInProgress]) {
+        NSLog(@"sync in progress");
         [self replaceRefreshButtonWithActivityIndicator];
     } else {
+        NSLog(@"sync is complete");
+       // [self loadRecordsFromCoreData];
+        //[self.tableListView reloadData];
+        [nearestLabel setText:[NSString stringWithFormat:@"%.2f",lowest]];
+        [furthestLabel setText:[NSString stringWithFormat:@"%.2f",highest]];
+        
         [self removeActivityIndicatorFromRefreshButon];
     }
 }
@@ -268,10 +276,11 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    
+    NSLog(@"inside view did appear");
     [self checkSyncStatus];
     
     [[NSNotificationCenter defaultCenter] addObserverForName:@"SDSyncEngineSyncCompleted" object:nil queue:nil usingBlock:^(NSNotification *note) {
+        NSLog(@"trigger for completion received in locationsview so reloading data");
         [self loadRecordsFromCoreData];
         [self.tableListView reloadData];
         [self checkSyncStatus];

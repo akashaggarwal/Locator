@@ -30,7 +30,7 @@
     UIColor *endColor;
     double lowest;
     double highest ;
-    
+   // int numberoftries  ;
     
 }
 
@@ -66,8 +66,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    
+     
     [tableListView setDelegate:self];
     [tableListView setDataSource:self];
     
@@ -91,15 +90,15 @@
     self.dateFormatter = [[NSDateFormatter alloc] init];
     [self.dateFormatter setTimeZone:[NSTimeZone timeZoneWithName:@"GMT"]];
     [self.dateFormatter setDateStyle:NSDateFormatterMediumStyle];
+   // [self loadRecordsFromCoreData];
+    //self.navigationItem.title = self.agencyName;
+    [self settitleBar:self.agencyName secondLineText:nil];
     
-    self.navigationItem.title = self.agencyName;
-    
-    
-    [self loadRecordsFromCoreData];
+ //   [self loadRecordsFromCoreData];
 //    [self setupSearchBar];
     self.searchResults = [NSMutableArray array];
    // self.automaticallyAdjustsScrollViewInsets = NO;
-    
+   // numberoftries = 0;
     
 }
 
@@ -108,7 +107,31 @@
     [super viewDidUnload];
 }
 
-
+-(void) settitleBar:(NSString *) text
+                            secondLineText:(NSString *)text2
+{
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 480, 44)];
+    label.backgroundColor = [UIColor clearColor];
+    if ([text2 length] > 0)
+        label.numberOfLines = 2;
+    else
+        label.numberOfLines = 1;
+    NSLog(@"length is %d",[text length]);
+    if ([text length] > 25 )
+        label.font = [UIFont boldSystemFontOfSize: 11.0f];
+    else
+        label.font = [UIFont boldSystemFontOfSize: 14.0f];
+    
+    label.shadowColor = [UIColor colorWithWhite:0.0 alpha:0.5];
+    label.textAlignment = NSTextAlignmentCenter;
+    label.textColor = [UIColor whiteColor];
+     if ([text2 length] > 0)
+         label.text = [NSString stringWithFormat:@"%@\n%@", text, text2];
+     else
+         label.text = text;
+    
+    self.navigationItem.titleView = label;
+}
 - (void)viewWillAppear:(BOOL)animated {
     // [self.navigationController setNavigationBarHidden:NO];
 //    NSLog(@"search bar frame height is %f ",self.searchBar.frame.size.height );
@@ -121,21 +144,66 @@
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 
+-(void) retry
+{
+    [[SDSyncEngine sharedEngine] startSync];
+}
 
 - (void)viewDidAppear:(BOOL)animated {
     
-     //[self.searchBar becomeFirstResponder];
-    
     [super viewDidAppear:animated];
     
-    [self checkSyncStatus];
+   [self checkSyncStatus];
     
     [[NSNotificationCenter defaultCenter] addObserverForName:@"SDSyncEngineSyncCompleted" object:nil queue:nil usingBlock:^(NSNotification *note) {
         [self loadRecordsFromCoreData];
         [self.tableListView reloadData];
-        [self checkSyncStatus];
+       // numberoftries ++;
+//       NSDictionary *size = [NSDictionary dictionaryWithObjectsAndKeys:[UIFont fontWithName:@"Arial" size:9.0],UITextAttributeFont,
+//                             [UIColor whiteColor],  NSForegroundColorAttributeName,
+//                             nil];
+//        //NSDictionary *attributes = [NSDictionary dictionaryWithObjectsAndKeys:[UIFont
+//          //                                                                     fontWithName:@"Arial" size:8.0], NSFontAttributeName,
+//         //                           [UIColor whiteColor], NSForegroundColorAttributeName, nil];
+//        
+//        //[[UINavigationBar appearance] setTitleTextAttributes:attributes];
+//        self.navigationController.navigationBar.titleTextAttributes = size;
+        NSString *titletext = nil;
+        
+//        if ([self.data count] == 0 && numberoftries < 3)
+//         {
+//             NSLog(@"retrying loading of data try number %d", numberoftries);
+//             titletext = [NSString stringWithFormat:@"Retrying....try number %d",numberoftries];
+//             [self settitleBar:titletext secondLineText:nil];
+//             [self retry];
+//         }
+//        else if ([self.data count] == 0 && numberoftries >= 3)
+//        {
+//           titletext = [NSString stringWithFormat:@"We are not able to load the data, please try again by clicking Refresh buttton on right"];
+//            [self settitleBar:titletext secondLineText:nil];
+//        }
+        if ([self.data count] == 0 )
+        {
+            titletext = [NSString stringWithFormat:@"Unable to load the data, please try again by clicking Refresh"];
+                        [self settitleBar:titletext secondLineText:nil];
+        }
+        else
+        {
+            if ([self.data count] == 1000)
+                [self settitleBar: self.agencyName secondLineText:@"(Top 1000 brands only)"];
+            
+            else
+                [self settitleBar: self.agencyName secondLineText:[NSString stringWithFormat:@"(%d brands)",[self.data count]]];
+          
+            
+        }
+        
+        
+        
     }];
     [[SDSyncEngine sharedEngine] addObserver:self forKeyPath:@"syncInProgress" options:NSKeyValueObservingOptionNew context:nil];
+    
+    
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
@@ -249,7 +317,7 @@
     cell.backgroundColor = [UIColor colorWithPatternImage:[AppDelegate createGradientImageFromColor:start toColor:end withSize:cell.bounds.size] ];
 
     
-    NSLog(@"inside cell %@",[myData brandname]);
+    //NSLog(@"inside cell %@",[myData brandname]);
 
     //cell.cellItemLabel.text = [myData brandname];
     cell.titleLabel.text = [myData brandname];
@@ -346,17 +414,20 @@
 
 
 - (IBAction)actionClose:(id)sender {
+   // [super viewDidDisappear:animated];
+   
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 
 - (void)loadRecordsFromCoreData {
     
-    NSLog(@"inside brandsviewcontroller Agency code is %@", agencyCode);
+    NSLog(@"inside loadRecordsFromCoreData Agency code is %@", agencyCode);
     [self.managedObjectContext performBlockAndWait:^{
         [self.managedObjectContext reset];
         NSError *error = nil;
         NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:self.entityName];
+        
         [request setSortDescriptors:[NSArray arrayWithObject:
                                      [NSSortDescriptor sortDescriptorWithKey:@"brandname" ascending:YES]]];
         
@@ -372,8 +443,12 @@
         
         self.sorteddata = [self.data sortedArrayUsingDescriptors:sortDescriptors];
         self.searchResults = self.sorteddata;
+        NSLog((@"loading in block thread complete"));
         
+        NSLog(@"count is %d",[self.searchResults count]);
     }];
+    
+    NSLog(@" loading finish");
 }
 //- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 //{
@@ -381,6 +456,7 @@
 //}
 
 - (IBAction)refreshButtonClicked:(id)sender {
+    NSLog(@"Inside refreshButtonClicked for BrandsViewController");
     [[SDSyncEngine sharedEngine] startSync];
     
    // self.brandsearchbar.frame = CGRectMake(0.0, 0, 320, 44);
@@ -389,8 +465,13 @@
 
 - (void)checkSyncStatus {
     if ([[SDSyncEngine sharedEngine] syncInProgress]) {
+        NSLog(@"sync in progress");
         [self replaceRefreshButtonWithActivityIndicator];
     } else {
+         NSLog(@"sync is complete");
+      //  [self loadRecordsFromCoreData];
+        //[self.tableListView reloadData];
+       
         [self removeActivityIndicatorFromRefreshButon];
     }
 }

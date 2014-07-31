@@ -9,8 +9,6 @@
 
 @interface SDCoreDataController : NSObject
 
-
-
 + (id)sharedInstance;
 
 - (NSURL *)applicationDocumentsDirectory;

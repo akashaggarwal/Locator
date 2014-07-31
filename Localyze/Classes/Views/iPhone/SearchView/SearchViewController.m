@@ -155,7 +155,7 @@
     //reverse geocoding demo, coordinates to an address
     //_addressLabel.text = @"reverse geocoding coordinate ...";
     currentcoordinate = c.coordinate;
-       NSLog(@"current coordinate is %f, %f", currentcoordinate.latitude, currentcoordinate.longitude);
+    //  NSLog(@"current coordinate is %f, %f", currentcoordinate.latitude, currentcoordinate.longitude);
     [[AppDelegate sharedDelegate] setCurrentcoordinate:currentcoordinate];
     
     
@@ -168,6 +168,7 @@
     [manager stopUpdatingLocation];
     NSLog(@"error%@",error);
     showZipOption = true;
+    //[SDSyncEngine sharedEngine].showZipOption = showZipOption;
     switch([error code])
     {
         case kCLErrorNetwork: // general, network-related error
@@ -198,6 +199,8 @@
 
 
 - (void)viewWillDisappear:(BOOL)animated {
+   // [manager stopUpdatingLocation];
+
     // unregister for keyboard notifications while not visible.
    // [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillShowNotification object:nil];
 }

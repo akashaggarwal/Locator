@@ -371,8 +371,8 @@
                                 <nil key="highlightedColor"/>
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="hand.png" id="2Zr-wa-ddK">
-                                <rect key="frame" x="89" y="232" width="142" height="149"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="macallan.jpeg" id="2Zr-wa-ddK">
+                                <rect key="frame" x="95" y="196" width="118" height="234"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -418,7 +418,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="0iw-cc-JYT">
-                                        <rect key="frame" x="71" y="410" width="143" height="41"/>
+                                        <rect key="frame" x="75" y="347" width="143" height="41"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
                                         <inset key="titleEdgeInsets" minX="7" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -782,6 +782,7 @@
         <image name="hand.png" width="142" height="148"/>
         <image name="input.png" width="290" height="40"/>
         <image name="list-item-pin.png" width="8" height="12"/>
+        <image name="macallan.jpeg" width="81" height="239"/>
         <image name="map-details.png" width="320" height="89"/>
         <image name="search-button.png" width="290" height="42"/>
     </resources>

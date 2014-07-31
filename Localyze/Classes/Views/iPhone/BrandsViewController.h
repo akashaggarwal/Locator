@@ -21,6 +21,8 @@
 @property (nonatomic, strong) NSString *entityName;
 @property (nonatomic, strong) NSString *agencyCode;
 @property (nonatomic, strong) NSString *agencyName;
+
+
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *refreshButton;
 - (IBAction)refreshButtonClicked:(id)sender;
 - (IBAction)actionClose:(id)sender ;

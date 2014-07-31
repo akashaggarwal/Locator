@@ -191,7 +191,9 @@
         
            [[SDSyncEngine sharedEngine] resetRegistration];
         [[SDSyncEngine sharedEngine] registerStringToSync:dynamicAgency];
+        NSLog(@"Inside prepareForSegue for DetailsViewCOntroller");
         [[SDSyncEngine sharedEngine] startSync];
+        
         //         UIOldMeterViewController *oldViewController = (UITabBarController *)[[segue.destinationViewController viewControllers] objectAtIndex:0];
         //         oldViewController.currentclaim = self.currentclaim;
     }

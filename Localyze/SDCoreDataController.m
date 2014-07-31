@@ -7,14 +7,12 @@
 
 #import "SDCoreDataController.h"
 
-
 @interface SDCoreDataController ()
 
 @property (strong, nonatomic) NSManagedObjectContext *masterManagedObjectContext;
 @property (strong, nonatomic) NSManagedObjectContext *backgroundManagedObjectContext;
 @property (strong, nonatomic) NSManagedObjectModel *managedObjectModel;
 @property (strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
-
 
 @end
 
@@ -64,7 +62,7 @@
     if (masterContext != nil) {
         _backgroundManagedObjectContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSPrivateQueueConcurrencyType];
         [_backgroundManagedObjectContext performBlockAndWait:^{
-            [_backgroundManagedObjectContext setParentContext:masterContext]; 
+            [_backgroundManagedObjectContext setParentContext:masterContext];
         }];
     }
     
@@ -78,7 +76,7 @@
     if (masterContext != nil) {
         newContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
         [newContext performBlockAndWait:^{
-            [newContext setParentContext:masterContext]; 
+            [newContext setParentContext:masterContext];
         }];
     }
     
@@ -90,7 +88,7 @@
         NSError *error = nil;
         BOOL saved = [self.masterManagedObjectContext save:&error];
         if (!saved) {
-            // do some real error handling 
+            // do some real error handling
             NSLog(@"Could not save master context due to %@", error);
         }
     }];
@@ -101,7 +99,7 @@
         NSError *error = nil;
         BOOL saved = [self.backgroundManagedObjectContext save:&error];
         if (!saved) {
-            // do some real error handling 
+            // do some real error handling
             NSLog(@"Could not save background context due to %@", error);
         }
     }];
@@ -127,32 +125,15 @@
         return _persistentStoreCoordinator;
     }
     
-    // copying preloaded database if it does not exists
     NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"SignificantDates.sqlite"];
-    NSLog(@"the sqllite location is %@", [storeURL path]);
-    
-    
-//    if (![[NSFileManager defaultManager] fileExistsAtPath:[storeURL path]]) {
-//        NSURL *preloadURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"preload" ofType:@"sqlite"]];
-//        NSError* err = nil;
-//        
-//        if (![[NSFileManager defaultManager] copyItemAtURL:preloadURL toURL:storeURL error:&err]) {
-//            NSLog(@"Oops, could copy preloaded data");
-//        }
-//    }
-//    
-    
-    
-    
     
     NSError *error = nil;
     _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
-    NSLog(@"here before adding persistent store");
     if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error]) {
         /*
          Replace this implementation with code to handle the error appropriately.
          
-         abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. 
+         abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
          
          Typical reasons for an error here include:
          * The persistent store is not accessible;
@@ -166,7 +147,7 @@
          * Simply deleting the existing store:
          [[NSFileManager defaultManager] removeItemAtURL:storeURL error:nil]
          
-         * Performing automatic lightweight migration by passing the following dictionary as the options parameter: 
+         * Performing automatic lightweight migration by passing the following dictionary as the options parameter:
          [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithBool:YES], NSMigratePersistentStoresAutomaticallyOption, [NSNumber numberWithBool:YES], NSInferMappingModelAutomaticallyOption, nil];
          
          Lightweight migration will only work for a limited set of schema changes; consult "Core Data Model Versioning and Data Migration Programming Guide" for details.
@@ -174,7 +155,7 @@
          */
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
         abort();
-    }    
+    }
     
     return _persistentStoreCoordinator;
 }
