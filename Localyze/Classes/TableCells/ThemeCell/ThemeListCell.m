@@ -29,12 +29,12 @@
     
     
     _titleLabel.textColor = [UIColor whiteColor];
-    _titleLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:17];
+    _titleLabel.font = [UIFont fontWithName:@"HelveticaNeue-Bold" size:17];
     
     NSString *address = [NSString stringWithFormat:@"%@\n%@ OH %@",_liqormodel.address, _liqormodel.city, _liqormodel.zip ];
     _locationLabel.text = address;
     _locationLabel.textColor = [UIColor colorWithWhite:1 alpha:0.6];
-    _locationLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:12];
+    _locationLabel.font = [UIFont fontWithName:@"HelveticaNeue-Bold" size:12];
     
     _distanceMetricLabel.text = [@"mi" lowercaseString];
     _distanceMetricLabel.textColor = [UIColor colorWithWhite:1 alpha:0.6];

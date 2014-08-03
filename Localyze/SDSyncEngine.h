@@ -17,7 +17,8 @@ typedef enum {
 @interface SDSyncEngine : NSObject
 
 @property (atomic, readonly) BOOL syncInProgress;
-
+//@property (nonatomic) double nearest;
+//@property (nonatomic) double farthest;
 //@property (nonatomic) BOOL showZipOption;
 + (SDSyncEngine *)sharedEngine;
 

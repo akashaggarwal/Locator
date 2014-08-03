@@ -184,7 +184,7 @@
 //        }
         if ([self.data count] == 0 )
         {
-            titletext = [NSString stringWithFormat:@"Unable to load the data, please try again by clicking Refresh"];
+            titletext = [NSString stringWithFormat:@"Unable to Load, Click Refresh for Retry"];
                         [self settitleBar:titletext secondLineText:nil];
         }
         else

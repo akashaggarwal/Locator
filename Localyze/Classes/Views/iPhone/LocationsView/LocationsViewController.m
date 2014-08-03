@@ -83,7 +83,9 @@
     self.animationController = [[DropAnimationController alloc] init];
 //    self.animationController = [[SliceAnimationController alloc] init];
     
+    //[self loadRecordsFromCoreData];
     
+
     
     
     
@@ -93,11 +95,7 @@
     [self.dateFormatter setTimeZone:[NSTimeZone timeZoneWithName:@"GMT"]];
     [self.dateFormatter setDateStyle:NSDateFormatterMediumStyle];
     
-    [self loadRecordsFromCoreData];
-    
-    
-    [nearestLabel setText:[NSString stringWithFormat:@"%.2f",lowest]];
-    [furthestLabel setText:[NSString stringWithFormat:@"%.2f",highest]];
+  
     //NSLog(@"zip option is %hhd", [[SDSyncEngine sharedEngine] showZipOption]);
 }
 
@@ -226,8 +224,8 @@
         NSArray *sortDescriptors = [NSArray arrayWithObjects:firstDescriptor, nil];
         
         self.sorteddata = [self.data sortedArrayUsingDescriptors:sortDescriptors];
-        
-        
+//        [[SDSyncEngine sharedEngine] setNearest:lowest];
+//        [[SDSyncEngine sharedEngine] setFarthest:highest];
     }];
 }
 
@@ -243,9 +241,10 @@
         NSLog(@"sync in progress");
         [self replaceRefreshButtonWithActivityIndicator];
     } else {
-        NSLog(@"sync is complete");
+        NSLog(@"sync is complete inside checksncstatus");
        // [self loadRecordsFromCoreData];
         //[self.tableListView reloadData];
+      //  NSLog(@"value is %f",[[SDSyncEngine sharedEngine] nearest]);
         [nearestLabel setText:[NSString stringWithFormat:@"%.2f",lowest]];
         [furthestLabel setText:[NSString stringWithFormat:@"%.2f",highest]];
         
@@ -276,18 +275,37 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    NSLog(@"inside view did appear");
-    [self checkSyncStatus];
     
+    
+    [self checkSyncStatus];
     [[NSNotificationCenter defaultCenter] addObserverForName:@"SDSyncEngineSyncCompleted" object:nil queue:nil usingBlock:^(NSNotification *note) {
         NSLog(@"trigger for completion received in locationsview so reloading data");
         [self loadRecordsFromCoreData];
         [self.tableListView reloadData];
+        
+       
         [self checkSyncStatus];
+        
     }];
     [[SDSyncEngine sharedEngine] addObserver:self forKeyPath:@"syncInProgress" options:NSKeyValueObservingOptionNew context:nil];
 }
-
+//- (void)viewWillAppear:(BOOL)animated {
+//    // [self.navigationController setNavigationBarHidden:NO];
+//    //    NSLog(@"search bar frame height is %f ",self.searchBar.frame.size.height );
+//    //    CGPoint offset = CGPointMake(0, -(self.searchBar.frame.size.height) );
+//    //    self.tableListView.contentOffset = offset ;
+//   
+//    NSLog(@"inside view did appear");
+//    
+//    [nearestLabel setText:[NSString stringWithFormat:@"%.2f",lowest]];
+//    [furthestLabel setText:[NSString stringWithFormat:@"%.2f",highest]];
+//    
+//    [super viewWillAppear:animated];
+//    
+//    
+//    
+//    
+//}
 - (void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:@"SDSyncEngineSyncCompleted" object:nil];

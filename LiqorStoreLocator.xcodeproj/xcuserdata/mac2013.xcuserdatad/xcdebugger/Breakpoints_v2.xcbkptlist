@@ -42,12 +42,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Localyze/Classes/Views/iPhone/LocationsView/LocationsViewController.m"
-            timestampString = "426373646.71987"
+            timestampString = "428780644.011194"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "99"
-            endingLineNumber = "99"
-            landmarkName = "-viewDidLoad"
+            startingLineNumber = "206"
+            endingLineNumber = "206"
+            landmarkName = "-loadRecordsFromCoreData"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -58,7 +58,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Localyze/Classes/Views/iPhone/LocationsView/LocationsViewController.m"
-            timestampString = "426373646.71987"
+            timestampString = "428780644.011194"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "208"
@@ -74,27 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Localyze/Classes/Views/iPhone/LocationsView/LocationsViewController.m"
-            timestampString = "426373646.71987"
+            timestampString = "428780644.011194"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "210"
-            endingLineNumber = "210"
-            landmarkName = "-loadRecordsFromCoreData"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Localyze/Classes/Views/iPhone/LocationsView/LocationsViewController.m"
-            timestampString = "426373646.71987"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "221"
-            endingLineNumber = "221"
+            startingLineNumber = "219"
+            endingLineNumber = "219"
             landmarkName = "-loadRecordsFromCoreData"
             landmarkType = "5">
          </BreakpointContent>
@@ -266,11 +250,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Localyze/Classes/Views/iPhone/LocationsView/LocationsViewController.m"
-            timestampString = "427606032.110396"
+            timestampString = "428780644.011194"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "242"
-            endingLineNumber = "242"
+            startingLineNumber = "240"
+            endingLineNumber = "240"
             landmarkName = "-checkSyncStatus"
             landmarkType = "5">
          </BreakpointContent>
@@ -282,11 +266,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Localyze/Classes/Views/iPhone/LocationsView/LocationsViewController.m"
-            timestampString = "426373646.71987"
+            timestampString = "428780644.011194"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "121"
-            endingLineNumber = "121"
+            startingLineNumber = "119"
+            endingLineNumber = "119"
             landmarkName = "@implementation LocationsViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -298,11 +282,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Localyze/Classes/Views/iPhone/LocationsView/LocationsViewController.m"
-            timestampString = "426373646.71987"
+            timestampString = "428780644.011194"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "123"
-            endingLineNumber = "123"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
             landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -314,11 +298,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Localyze/Classes/Views/iPhone/LocationsView/LocationsViewController.m"
-            timestampString = "426373646.71987"
+            timestampString = "428780644.011194"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "187"
-            endingLineNumber = "187"
+            startingLineNumber = "185"
+            endingLineNumber = "185"
             landmarkName = "-loadRecordsFromCoreData"
             landmarkType = "5">
          </BreakpointContent>
@@ -330,11 +314,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Localyze/Classes/Views/iPhone/LocationsView/LocationsViewController.m"
-            timestampString = "426373646.71987"
+            timestampString = "428780644.011194"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "228"
-            endingLineNumber = "228"
+            startingLineNumber = "226"
+            endingLineNumber = "226"
             landmarkName = "-loadRecordsFromCoreData"
             landmarkType = "5">
          </BreakpointContent>

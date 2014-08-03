@@ -21,6 +21,7 @@ NSString * const kSDSyncEngineSyncCompletedNotificationName = @"SDSyncEngineSync
 @property (nonatomic, strong) NSDateFormatter *dateFormatter;
 @property (nonatomic, strong) dispatch_queue_t backgroundSyncQueue;
 
+
 @end
 
 @implementation SDSyncEngine
