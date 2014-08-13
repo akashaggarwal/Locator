@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "EC1EF59B14CF042D005589AA"
                BuildableName = "LiqorStoreLocator.app"
-               BlueprintName = "LiqorStoreLocator"
-               ReferencedContainer = "container:LiqorStoreLocator.xcodeproj">
+               BlueprintName = "LiquorStoreLocator"
+               ReferencedContainer = "container:LiquorStoreLocator.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,8 +34,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "EC1EF59B14CF042D005589AA"
             BuildableName = "LiqorStoreLocator.app"
-            BlueprintName = "LiqorStoreLocator"
-            ReferencedContainer = "container:LiqorStoreLocator.xcodeproj">
+            BlueprintName = "LiquorStoreLocator"
+            ReferencedContainer = "container:LiquorStoreLocator.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -53,8 +53,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "EC1EF59B14CF042D005589AA"
             BuildableName = "LiqorStoreLocator.app"
-            BlueprintName = "LiqorStoreLocator"
-            ReferencedContainer = "container:LiqorStoreLocator.xcodeproj">
+            BlueprintName = "LiquorStoreLocator"
+            ReferencedContainer = "container:LiquorStoreLocator.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -71,8 +71,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "EC1EF59B14CF042D005589AA"
             BuildableName = "LiqorStoreLocator.app"
-            BlueprintName = "LiqorStoreLocator"
-            ReferencedContainer = "container:LiqorStoreLocator.xcodeproj">
+            BlueprintName = "LiquorStoreLocator"
+            ReferencedContainer = "container:LiquorStoreLocator.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

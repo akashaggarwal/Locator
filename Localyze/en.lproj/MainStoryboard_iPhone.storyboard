@@ -354,7 +354,7 @@
             </objects>
             <point key="canvasLocation" x="-887" y="236"/>
         </scene>
-        <!--Search View Controller - Ohio Liqor Store Locator-->
+        <!--Search View Controller - Ohio Liquor Store Locator-->
         <scene sceneID="T9k-dt-PQE">
             <objects>
                 <viewController id="r4v-cd-g8B" customClass="SearchViewController" sceneMemberID="viewController">
@@ -377,7 +377,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.32549020648002625" green="0.33725491166114807" blue="0.38431376218795776" alpha="1" colorSpace="deviceRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Ohio Liqor Store Locator" id="q8t-ei-vCL"/>
+                    <navigationItem key="navigationItem" title="Ohio Liquor Store Locator" id="q8t-ei-vCL"/>
                     <connections>
                         <outlet property="titleLabel" destination="Jef-X2-aT7" id="CKU-j6-X3S"/>
                         <segue destination="odq-nM-s5L" kind="push" identifier="showLocations" id="9L3-JV-AfF"/>
@@ -473,56 +473,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="DETERMINING YOUR LOCATION..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" minimumFontSize="10" id="d1O-53-vg2">
-                                <rect key="frame" x="35" y="64" width="265" height="80"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="You must enable location services in order to use this app. We will allow zip code search in a future release." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" minimumFontSize="10" id="d1O-53-vg2">
+                                <rect key="frame" x="41" y="214" width="222" height="166"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="45"/>
+                                <color key="textColor" red="0.64313727620000005" green="0.65098041299999998" blue="0.67058825489999996" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="We are sorry!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" minimumFontSize="10" id="hkb-kr-YiO">
+                                <rect key="frame" x="20" y="91" width="265" height="115"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="26"/>
                                 <color key="textColor" red="0.64313727620000005" green="0.65098041299999998" blue="0.67058825489999996" alpha="1" colorSpace="deviceRGB"/>
                                 <nil key="highlightedColor"/>
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="OR ENTER YOUR POSTCODE HERE" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="UFK-O3-blG">
-                                <rect key="frame" x="10" y="300" width="300" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="16"/>
-                                <color key="textColor" red="0.5176470876" green="0.54509806630000002" blue="0.56078433989999998" alpha="1" colorSpace="deviceRGB"/>
-                                <nil key="highlightedColor"/>
-                                <size key="shadowOffset" width="0.0" height="0.0"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="hand.png" id="WSG-QY-aBp">
-                                <rect key="frame" x="89" y="152" width="142" height="149"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="arrow.png" id="1DQ-LG-HBp">
-                                <rect key="frame" x="46" y="335" width="106" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Text input" minimumFontSize="17" background="input.png" id="SfD-cT-LOL">
-                                <rect key="frame" x="13" y="365" width="295" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="go"/>
-                                <connections>
-                                    <outlet property="delegate" destination="MiJ-i6-RS2" id="9JB-8p-Q89"/>
-                                </connections>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="95e-01-qag">
-                                <rect key="frame" x="13" y="414" width="295" height="46"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
-                                <state key="normal" title="Search" backgroundImage="search-button.png">
-                                    <color key="titleColor" red="0.5176470876" green="0.54509806630000002" blue="0.56078433989999998" alpha="1" colorSpace="deviceRGB"/>
-                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="actionSearch:" destination="MiJ-i6-RS2" eventType="touchUpInside" id="cbG-GL-hN4"/>
-                                    <segue destination="odq-nM-s5L" kind="push" id="LfL-ug-EwC"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.32549020649999999" green="0.33725491169999999" blue="0.38431376220000002" alpha="1" colorSpace="deviceRGB"/>
                     </view>
@@ -534,9 +500,6 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="alternativeLabel" destination="UFK-O3-blG" id="7iV-nh-wq7"/>
-                        <outlet property="searchButton" destination="95e-01-qag" id="v8H-n4-KK0"/>
-                        <outlet property="textField" destination="SfD-cT-LOL" id="cpV-3C-eS7"/>
                         <outlet property="titleLabel" destination="d1O-53-vg2" id="iXs-0z-6Zx"/>
                     </connections>
                 </viewController>
@@ -773,24 +736,17 @@
     </scenes>
     <resources>
         <image name="Clock.png" width="13" height="13"/>
-        <image name="arrow.png" width="106" height="22"/>
         <image name="button-add-location.png" width="332" height="37"/>
         <image name="button.png" width="143" height="41"/>
         <image name="details-map-gray.png" width="168" height="17"/>
         <image name="grey-titlebar.png" width="332" height="22"/>
-        <image name="hand.png" width="142" height="148"/>
-        <image name="input.png" width="290" height="40"/>
         <image name="list-item-pin.png" width="8" height="12"/>
         <image name="macallan.jpeg" width="81" height="239"/>
         <image name="map-details.png" width="320" height="89"/>
-        <image name="search-button.png" width="290" height="42"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
-    <inferredMetricsTieBreakers>
-        <segue reference="9L3-JV-AfF"/>
-    </inferredMetricsTieBreakers>
 </document>

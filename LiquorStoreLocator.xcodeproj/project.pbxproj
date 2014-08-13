@@ -386,8 +386,8 @@
 		7FAA64E317BF204F0058DABE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7FAA64E517BF204F0058DABE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		7FAA64E717BF204F0058DABE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
-		7FAA64E817BF204F0058DABE /* LiqorStoreLocator-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "LiqorStoreLocator-Info.plist"; sourceTree = "<group>"; };
-		7FAA64E917BF204F0058DABE /* LiqorStoreLocator-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LiqorStoreLocator-Prefix.pch"; sourceTree = "<group>"; };
+		7FAA64E817BF204F0058DABE /* LiquorStoreLocator-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "LiquorStoreLocator-Info.plist"; sourceTree = "<group>"; };
+		7FAA64E917BF204F0058DABE /* LiquorStoreLocator-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LiquorStoreLocator-Prefix.pch"; sourceTree = "<group>"; };
 		7FAA64EA17BF204F0058DABE /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7FD76D5D17C1FFC900EB9151 /* DetailiPadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailiPadViewController.h; sourceTree = "<group>"; };
 		7FD76D5E17C1FFC900EB9151 /* DetailiPadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailiPadViewController.m; sourceTree = "<group>"; };
@@ -456,7 +456,7 @@
 		DAF1270B192AD2BE002F5E05 /* ZipViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZipViewController.h; sourceTree = "<group>"; };
 		DAF1270C192AD2BE002F5E05 /* ZipViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZipViewController.m; sourceTree = "<group>"; };
 		EC16BC5C1518C352005AA9E9 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
-		EC1EF59C14CF042D005589AA /* LiqorStoreLocator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiqorStoreLocator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC1EF59C14CF042D005589AA /* LiquorStoreLocator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiquorStoreLocator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC1EF5A014CF042D005589AA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		EC1EF5A214CF042D005589AA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EC1EF5A414CF042D005589AA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -973,8 +973,8 @@
 			children = (
 				DA9D4E50191C87330056AFAC /* preload.sqlite */,
 				7FAA64E217BF204F0058DABE /* InfoPlist.strings */,
-				7FAA64E817BF204F0058DABE /* LiqorStoreLocator-Info.plist */,
-				7FAA64E917BF204F0058DABE /* LiqorStoreLocator-Prefix.pch */,
+				7FAA64E817BF204F0058DABE /* LiquorStoreLocator-Info.plist */,
+				7FAA64E917BF204F0058DABE /* LiquorStoreLocator-Prefix.pch */,
 				7FAA64EA17BF204F0058DABE /* main.m */,
 			);
 			name = "Supporting Files";
@@ -1087,7 +1087,7 @@
 		EC1EF59D14CF042D005589AA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EC1EF59C14CF042D005589AA /* LiqorStoreLocator.app */,
+				EC1EF59C14CF042D005589AA /* LiquorStoreLocator.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1113,9 +1113,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		EC1EF59B14CF042D005589AA /* LiqorStoreLocator */ = {
+		EC1EF59B14CF042D005589AA /* LiquorStoreLocator */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EC1EF5BD14CF042D005589AA /* Build configuration list for PBXNativeTarget "LiqorStoreLocator" */;
+			buildConfigurationList = EC1EF5BD14CF042D005589AA /* Build configuration list for PBXNativeTarget "LiquorStoreLocator" */;
 			buildPhases = (
 				D1F6EE56908F4E0EAD8F1D86 /* Check Pods Manifest.lock */,
 				EC1EF59814CF042D005589AA /* Sources */,
@@ -1127,9 +1127,9 @@
 			);
 			dependencies = (
 			);
-			name = LiqorStoreLocator;
+			name = LiquorStoreLocator;
 			productName = mapper;
-			productReference = EC1EF59C14CF042D005589AA /* LiqorStoreLocator.app */;
+			productReference = EC1EF59C14CF042D005589AA /* LiquorStoreLocator.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -1145,7 +1145,7 @@
 					};
 				};
 			};
-			buildConfigurationList = EC1EF59614CF042C005589AA /* Build configuration list for PBXProject "LiqorStoreLocator" */;
+			buildConfigurationList = EC1EF59614CF042C005589AA /* Build configuration list for PBXProject "LiquorStoreLocator" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -1157,7 +1157,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				EC1EF59B14CF042D005589AA /* LiqorStoreLocator */,
+				EC1EF59B14CF042D005589AA /* LiquorStoreLocator */,
 			);
 		};
 /* End PBXProject section */
@@ -1475,11 +1475,11 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Localyze/LiqorStoreLocator-Prefix.pch";
-				INFOPLIST_FILE = "Localyze/LiqorStoreLocator-Info.plist";
+				GCC_PREFIX_HEADER = "Localyze/LiquorStoreLocator-Prefix.pch";
+				INFOPLIST_FILE = "Localyze/LiquorStoreLocator-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_NAME = LiqorStoreLocator;
+				PRODUCT_NAME = LiquorStoreLocator;
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1560,11 +1560,11 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Localyze/LiqorStoreLocator-Prefix.pch";
-				INFOPLIST_FILE = "Localyze/LiqorStoreLocator-Info.plist";
+				GCC_PREFIX_HEADER = "Localyze/LiquorStoreLocator-Prefix.pch";
+				INFOPLIST_FILE = "Localyze/LiquorStoreLocator-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_NAME = LiqorStoreLocator;
+				PRODUCT_NAME = LiquorStoreLocator;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -1578,11 +1578,11 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Localyze/LiqorStoreLocator-Prefix.pch";
-				INFOPLIST_FILE = "Localyze/LiqorStoreLocator-Info.plist";
+				GCC_PREFIX_HEADER = "Localyze/LiquorStoreLocator-Prefix.pch";
+				INFOPLIST_FILE = "Localyze/LiquorStoreLocator-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_NAME = LiqorStoreLocator;
+				PRODUCT_NAME = LiquorStoreLocator;
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1593,7 +1593,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		EC1EF59614CF042C005589AA /* Build configuration list for PBXProject "LiqorStoreLocator" */ = {
+		EC1EF59614CF042C005589AA /* Build configuration list for PBXProject "LiquorStoreLocator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EC1EF5BB14CF042D005589AA /* Debug */,
@@ -1603,7 +1603,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EC1EF5BD14CF042D005589AA /* Build configuration list for PBXNativeTarget "LiqorStoreLocator" */ = {
+		EC1EF5BD14CF042D005589AA /* Build configuration list for PBXNativeTarget "LiquorStoreLocator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EC1EF5BE14CF042D005589AA /* Debug */,

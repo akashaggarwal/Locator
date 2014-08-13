@@ -16,7 +16,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    _titleLabel.font = [UIFont fontWithName:@"Avenir-Book" size:28];
+    _titleLabel.font = [UIFont fontWithName:@"Avenir-Book" size:40];
     
     _alternativeLabel.textColor = [UIColor colorWithRed:0.52f green:0.55f blue:0.56f alpha:1.00f];
     _alternativeLabel.font = [UIFont fontWithName:@"Avenir-Book" size:15];
